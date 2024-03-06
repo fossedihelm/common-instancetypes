@@ -37,6 +37,12 @@ case "$WINDOWS_VERSION" in
     DEFAULT_INSTANCETYPE=u1.large
     DEFAULT_PREFERENCE=windows.11.virtio
     ;;
+  windows2k12)
+    OS_VARIANT=win2k12
+    WINDOWS_ISO_OVERLAYS=(overlays/windows2k12)
+    VIRT_INSTALL_EXTRA_ARGS=(--boot uefi)
+    DEFAULT_PREFERENCE=windows.2k12.virtio
+    ;;
   windows2k16)
     OS_VARIANT=win2k16
     WINDOWS_ISO_OVERLAYS=(overlays/windows2k16)
