@@ -14,6 +14,3 @@ $path = "C:\SDelete"
 Invoke-WebRequest -Uri $url -OutFile $file
 Expand-Archive -LiteralPath $file -DestinationPath $path
 Start-Process $path\sdelete64.exe -Wait -ArgumentList "-accepteula -z C:"
-
-# Shut down the machine
-Stop-Computer -Force
